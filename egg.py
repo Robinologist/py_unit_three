@@ -1,9 +1,24 @@
-# Start writing your functions below this line
+# Define functions:
+def eggTop():
+    print("  _______\n /       \ \n/         \ ")
 
+def eggMiddle():
+    print("-\"-'-\"-'-\"-")
+
+def eggBottom():
+    print("\         / \n \_______/")
 
 def main():
-    # all of your function calls should go here. Remove the word "pass" before adding function calls.
-    pass
+    eggTop()
+    eggBottom()
+    eggMiddle()
+    eggTop()
+    eggBottom()
+    eggMiddle()
+    eggBottom()
+    eggTop()
+    eggMiddle()
+    eggBottom()
 
-if __name__ == '__main__':
-    main()
+#Call main:
+main()
