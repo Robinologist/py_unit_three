@@ -38,20 +38,32 @@ class MyTestCase(unittest.TestCase):
             sys.stdout = saved_stdout
 
     def test_adding_one_negative(self):
-        """
-        Delete the word "pass" and write a test that will make sure your function works when adding a positive
-        and a negative number
-        :return: none
-        """
-        pass
+        import sys
+        from io import StringIO
+
+        saved_stdout = sys.stdout
+        try:
+            out = StringIO()
+            sys.stdout = out
+            addition.add_two(-3, 7)
+            output = out.getvalue().strip()
+            assert output == "The sum of -3 and 7 is 4"
+        finally:
+            sys.stdout = saved_stdout
 
     def test_adding_two_negatives(self):
-        """
-        Delete the word "pass" and write a test that will make sure your function works when adding two
-        negative numbers.
-        :return: none
-        """
-        pass
+        import sys
+        from io import StringIO
+
+        saved_stdout = sys.stdout
+        try:
+            out = StringIO()
+            sys.stdout = out
+            addition.add_two(-6, -13)
+            output = out.getvalue().strip()
+            assert output == "The sum of -6 and -13 is -19"
+        finally:
+            sys.stdout = saved_stdout
 
 
 if __name__ == '__main__':
