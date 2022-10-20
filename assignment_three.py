@@ -58,8 +58,7 @@ def main():
     centerColor = getCenterColor()
     petalColor = getPetalColor()
     drawHexagons(sideLength,centerColor,petalColor)
+    turtle.exitonclick()
 
 
 main()
-
-turtle.exitonclick()
